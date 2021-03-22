@@ -4,9 +4,9 @@
 #include <ESP8266HTTPClient.h>
 
 /*---------------------CREDENTIALS NEEDED TO BE ENTERED ---------------------------------------*/
-String apiKey = "O4IBMWYI7KUVZGR8";     //  Enter your Write API key from ThingSpeak
-const char* ssid =  "Maple Software";     // Enter your WiFi Network's SSID
-const char* pass =  "22221111"; // Enter your WiFi Network's Password
+String apiKey = "APIKEYHERE";     //  Enter your Write API key from ThingSpeak
+const char* ssid =  "WIFI ssid here";     // Enter your WiFi Network's SSID
+const char* pass =  "wifi pass here"; // Enter your WiFi Network's Password
 const char* server = "api.thingspeak.com";
 /*---------------------**************--------------------------------------------------------*/
 //For accelerometer values
@@ -195,7 +195,7 @@ void loop()
 }
 void uploadData()
 {
- String url="https://api.thingspeak.com/update?api_key=R2P1UNETVGPMV9BA&field1="+(String)volt1;//+"&field2=''";      //http request url
+ String url="https://api.thingspeak.com/update?api_key=APIKEYHERE&field1="+(String)volt1;//+"&field2=''";      //http request url
           http.begin(url,"27:18:92:DD:A4:26:C3:07:09:B9:7A:E6:C5:21:B9:5B:48:F7:16:E1");     // begin the http connection
          http.addHeader("Content-Type", "text/plain");  //Specify content-type header
        
@@ -211,7 +211,7 @@ void uploadData()
 }
 void uploadDataForCurrent()
 {
-   String url="https://api.thingspeak.com/update?api_key=9R394OVE47WLDGTD&field1="+(String)rmsI;//+"&field2=''";      //http request url
+   String url="https://api.thingspeak.com/update?api_key=APIKEYHERE&field1="+(String)rmsI;//+"&field2=''";      //http request url
           http.begin(url,"27:18:92:DD:A4:26:C3:07:09:B9:7A:E6:C5:21:B9:5B:48:F7:16:E1");     // begin the http connection
          http.addHeader("Content-Type", "text/plain");  //Specify content-type header
        
@@ -225,7 +225,7 @@ void uploadDataForCurrent()
 }
 void uploadDataForCurrent2()
 {
-   String url="https://api.thingspeak.com/update?api_key=O4IBMWYI7KUVZGR8&field1="+(String)rmsI1;//+"&field2=''";      //http request url
+   String url="https://api.thingspeak.com/update?api_key=APIKEYHERE&field1="+(String)rmsI1;//+"&field2=''";      //http request url
           http.begin(url,"27:18:92:DD:A4:26:C3:07:09:B9:7A:E6:C5:21:B9:5B:48:F7:16:E1");     // begin the http connection
          http.addHeader("Content-Type", "text/plain");  //Specify content-type header
        
@@ -239,7 +239,7 @@ void uploadDataForCurrent2()
 }
 void uploadDataForCurrent3()
 {
-   String url="https://api.thingspeak.com/update?api_key=7YC9TNCQFW2CZ8JO&field1="+(String)rmsI2;//+"&field2=''";      //http request url
+   String url="https://api.thingspeak.com/update?api_key=APIKEYHERE&field1="+(String)rmsI2;//+"&field2=''";      //http request url
           http.begin(url,"27:18:92:DD:A4:26:C3:07:09:B9:7A:E6:C5:21:B9:5B:48:F7:16:E1");     // begin the http connection
          http.addHeader("Content-Type", "text/plain");  //Specify content-type header
        
@@ -253,7 +253,7 @@ void uploadDataForCurrent3()
 }
 void uploadDataForAccelerometer()
 {
-     String url="https://api.thingspeak.com/update?api_key=5Y252W2RDINO042Z&field1="+(String)xaxis+"&field2="+(String)yaxis+"&field3="+(String)xaxis;      //http request url
+     String url="https://api.thingspeak.com/update?api_key=APIKEYHERE&field1="+(String)xaxis+"&field2="+(String)yaxis+"&field3="+(String)xaxis;      //http request url
           http.begin(url,"27:18:92:DD:A4:26:C3:07:09:B9:7A:E6:C5:21:B9:5B:48:F7:16:E1");     // begin the http connection
          http.addHeader("Content-Type", "text/plain");  //Specify content-type header
        
